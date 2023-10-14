@@ -23,6 +23,7 @@
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^6.1.4",
     "@types/babel__core": "^7.20.2",
+    "@vitejs/plugin-react-swc": "^3.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.3",

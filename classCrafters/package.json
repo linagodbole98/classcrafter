@@ -20,6 +20,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.7",
+    "@testing-library/jest-dom": "^6.1.4",
     "@types/babel__core": "^7.20.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -46,6 +48,26 @@
     "prettier": "3.0.3",
     "typescript": "^5.2.2",
     "vite": "^4.4.5"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "verbose": true,
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/jest-setup.ts"
+    ],
+    "moduleNameMapper": {
+      "^src/(.*)$": "<rootDir>/src/$1",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      "^.+\\.svg$": "<rootDir>/src/svgTransform.cjs"
+    }
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [

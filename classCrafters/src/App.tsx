@@ -1,10 +1,10 @@
-
 import Routers from 'src/routes/index';
 
 function App() {
   return (
-    <div className='app'>
-    <Routers/>
+    <div className="app">
+      
+      <Routers />
     </div>
   );
 }

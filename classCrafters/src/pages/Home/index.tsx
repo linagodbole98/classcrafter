@@ -1,12 +1,12 @@
-import "./index.css";
-
+import './index.css';
 
 function Home() {
   return (
-  <div className="home">
-    Hello Guys! <br></br>
-    This is class crafter
-    </div>);
+    <h1 className="home">
+      Hello Guys! <br></br>
+      This is class crafter
+    </h1>
+  );
 }
 
 export default Home;

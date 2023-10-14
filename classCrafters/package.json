@@ -14,6 +14,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "test": "jest",
     "lint:fix": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "prettier": "prettier --write   \"./**/*.{css,js,json,scss,ts,tsx,jsx,md}\" --config ./.prettierrc",
     "format": "yarn prettier && yarn lint:fix --max-warnings 0",
@@ -22,6 +23,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
     "@types/babel__core": "^7.20.2",
     "@vitejs/plugin-react-swc": "^3.4.0",
     "react": "^18.2.0",
@@ -31,6 +33,7 @@
     "sass": "^1.69.3"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.5",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
@@ -45,8 +48,11 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "husky": "^8.0.3",
+    "jest": "29.1.0",
+    "jest-environment-jsdom": "^29.5.0",
     "lint-staged": "^14.0.1",
     "prettier": "3.0.3",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.2.2",
     "vite": "^4.4.5"
   },
@@ -66,8 +72,7 @@
       "src"
     ],
     "transform": {
-      "^.+\\.tsx?$": "ts-jest",
-      "^.+\\.svg$": "<rootDir>/src/svgTransform.cjs"
+      "^.+\\.tsx?$": "ts-jest"
     }
   },
   "lint-staged": {
